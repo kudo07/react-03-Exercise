@@ -1,0 +1,172 @@
+body {
+  /* margin: 10px; */
+
+  background-image: repeating-linear-gradient(
+      to right,
+      #fff2f5,
+      #fff0f3,
+      0.5px,
+      transparent 1px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #fcedf0,
+      #fcedf0,
+      0.5px,
+      transparent 1px,
+      transparent 30px
+    );
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+.wrapper {
+  margin: 4rem 0rem;
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, ebe6ff2e, ebe6ff2e);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ff2625, #ff2625);
+  border-radius: 10px;
+  border: 3px solid #333;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #ff2625, #ff2625);
+}
+
+/* Handle on scroll */
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(90deg, #e6326e, #e6326e);
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.react-horizontal-scrolling-menu--wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-image {
+  width: 729px;
+  height: 742px;
+}
+
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 740px;
+  height: 1000px;
+  margin-top: -330px;
+  border-radius: 0px 100px;
+}
+exercise-card {
+  width: 400px;
+  height: 445px;
+  background: #fff;
+  border-top: 4px solid #ff2625;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+  height: 326px;
+}
+
+.exercise-card img {
+  height: 326px;
+}
+
+.bodyPart-card {
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card:hover,
+.bodyPart-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.search-btn:hover {
+  color: #ff2625;
+  border: 1px solid #ff2625;
+}
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
+}
+/* max-width-- isse agr niche gyi toh ye style apply honge */
+/* min-width-- agr is width se upr gyi toh apply hogi */
+@media screen and (max-width: 1200px) {
+  .detail-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    position: static !important;
+  }
+
+  .hero-banner-img {
+    display: none;
+  }
+
+  .exercise-card {
+    width: 320px;
+  }
+
+  .exercise-video {
+    width: 320px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .exercise-card {
+    width: 280px;
+  }
+}
