@@ -8,7 +8,7 @@ const options = {
   },
 };
 
-export const fetchFromApi1 = async (url) => {
+export const fetchFromApii = async (url) => {
   const { data } = await axios.get(`${BASE_URL}/${url}`, options);
   return data;
 };

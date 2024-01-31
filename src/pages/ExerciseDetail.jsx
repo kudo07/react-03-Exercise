@@ -3,8 +3,8 @@ import Detail from '../components/Detail';
 import ExerciseVideos from '../components/ExerciseVideos';
 import SimilarExercises from '../components/SimilarExercises';
 import { useEffect, useState } from 'react';
-import { fetchFromApi } from '../utils/FetchFromApi';
-import { fetchFromApi1 } from '../utils/FetchFromApi1';
+import { fetchFromApi } from '../utils/fetchFromApi';
+import { fetchFromApii } from '../utils/fetchFromApii';
 import { useParams } from 'react-router-dom';
 
 const ExerciseDetail = () => {
@@ -20,7 +20,7 @@ const ExerciseDetail = () => {
       setExerciseDetail(exerciseDetailData);
 
       //
-      const exerciseVideosData = await fetchFromApi1(
+      const exerciseVideosData = await fetchFromApii(
         `search?query=${exerciseDetailData.name}exercise`
       );
       setExerciseVideos(exerciseVideosData.contents);
